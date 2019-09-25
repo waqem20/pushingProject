@@ -1,7 +1,10 @@
 com\utils\Constants.class
+com\runners\TestRunner.class
+com\pages\DashBoardPage.class
+com\utils\ConfigFileReader.class
+com\utils\FileReaderManager.class
 com\pages\LoginPage.class
 com\stepDefinitions\LoginPageStep.class
 com\utils\CommonMethod.class
-com\runners\TestRunner.class
 com\utils\BaseClass.class
-com\pages\DashBoardPage.class
+com\stepDefinitions\Hooks.class

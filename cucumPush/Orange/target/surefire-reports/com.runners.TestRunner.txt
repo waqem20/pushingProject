@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.runners.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.114 s <<< FAILURE! - in com.runners.TestRunner
-initializationError(com.runners.TestRunner)  Time elapsed: 0.003 s  <<< ERROR!
-cucumber.runtime.CucumberException: Couldn't load plugin class: com.cucumber.listener.ExtentCucumberFormatter
-Caused by: java.lang.ClassNotFoundException: com.cucumber.listener.ExtentCucumberFormatter
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.31 s <<< FAILURE! - in com.runners.TestRunner
+initializationError(com.runners.TestRunner)  Time elapsed: 0.01 s  <<< ERROR!
+java.lang.NoClassDefFoundError: gherkin/formatter/Reporter
+Caused by: java.lang.ClassNotFoundException: gherkin.formatter.Reporter
 

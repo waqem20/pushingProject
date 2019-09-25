@@ -3,6 +3,12 @@
   <groupId>com.orangeproj</groupId>
   <artifactId>Orange</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  
   <build>
  	 <plugins>
   		<plugin>
@@ -20,19 +26,31 @@
     	<groupId>net.masterthought</groupId>
     	<artifactId>maven-cucumber-reporting</artifactId>
     	<version>4.5.0</version>
+    	<executions>
+    		<execution>
+    			<id>execution</id>
+    			<phase>verify</phase>
+    			<goals>
+    				<goal>generate</goal>
+    			</goals>
+    			<configuration>
+    				<projectName>Orange</projectName>
+    				<outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
+                    <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
+    			</configuration>
+    		</execution>
+    	</executions>
   		</plugin>
   	</plugins>
   </build>
   
   <dependencies>
-  	<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
 	<dependency>
    		 <groupId>io.cucumber</groupId>
     	 <artifactId>cucumber-java</artifactId>
     	 <version>3.0.2</version>
 	</dependency>
 	
-	<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
 	<dependency>
     	<groupId>io.cucumber</groupId>
     	<artifactId>cucumber-junit</artifactId>
@@ -40,13 +58,22 @@
     	<scope>test</scope>
 	</dependency>
 	
-	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 	<dependency>
     	<groupId>org.seleniumhq.selenium</groupId>
    	 	<artifactId>selenium-java</artifactId>
     	<version>3.12.0</version>
 	</dependency>
   	
-  
+	<dependency>
+	 <groupId>com.vimalselvam</groupId>
+	 <artifactId>cucumber-extentsreport</artifactId>
+	 <version>3.0.2</version>
+	</dependency>
+  	
+  	<dependency>
+ 	<groupId>com.aventstack</groupId>
+ 	<artifactId>extentreports</artifactId>
+ 	<version>3.1.2</version>
+	</dependency>
   </dependencies>
 </project>

@@ -6,4 +6,6 @@ public class Constants {
 	
 	public static String osName = System.getProperty("os.name");
 	
+	public static String propertyExtent ="C:\\Users\\waqem.haq\\eclipse-workspace\\Orange\\src\\test\\resources\\configs\\ConfigFileReader.properties";
+	
 }

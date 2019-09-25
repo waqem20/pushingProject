@@ -45,9 +45,9 @@ public class LoginPageStep {
 	public void login_is_successful(String errMessage) throws Exception {
 		Thread.sleep(5000);
 		dashBoard.welcome.isDisplayed();
-		login=new LoginPage();
-		String actualError = login.errorMessage.getText();
-		Assert.assertEquals(errMessage, actualError);
+//		login=new LoginPage();
+//		String actualError = login.errorMessage.getText();
+//		Assert.assertEquals(errMessage, actualError);
 		
 	   
 	}

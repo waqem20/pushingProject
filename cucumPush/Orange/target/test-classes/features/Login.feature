@@ -10,4 +10,15 @@ Feature: Login feature
   And I click login button 
   Then Login is successful 
 
+  @Smoke
+  Scenario Outline: Invalid login
+    Given I enter "<username>" and "<password>"
+    And I click login button
+    Then I see error message "<errorMessage>" 
+
+    Examples: 
+      | username  | password | errorMessage 			 |
+      | waqem			| hello123 | Invalid credentials |
+      #| miguel123	| pass123  | Invalid credentials |
+  	  #| joe				|	star		 | Invalid credentials |
  
